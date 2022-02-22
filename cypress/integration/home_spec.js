@@ -24,6 +24,11 @@ describe('My First Test', () => {
     cy.url().should('include', '/blog')
   })
 
+  it("Open external API documentation", () => {
+    cy.visit('http://padrinorb.com')
+    cy.contains('API').should('have.attr', 'href', 'http://www.rubydoc.info/github/padrino/padrino-framework')
+  })
+
   it("Opens link to '/contribute'", () => {
     cy.visit('http://padrinorb.com')
     cy.contains('Contribute').click()
