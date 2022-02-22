@@ -1,5 +1,8 @@
 describe('My First Test', () => {
-  it('Does not do much!', () => {
-    expect(true).to.equal(true)
+  it('Visit the homepage', () => {
+    cy.visit('http://padrinorb.com')
+
+    cy.contains('View on GitHub')
+    cy.contains('Open Chat')
   })
 })
