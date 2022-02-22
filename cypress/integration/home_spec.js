@@ -3,6 +3,10 @@ describe('My First Test', () => {
     cy.visit('http://padrinorb.com')
 
     cy.contains('View on GitHub')
-    cy.contains('Open Chat')
+  })
+
+  it('Opens that chat windows', () => {
+    cy.visit('http://padrinorb.com')
+    cy.contains('Open Chat').click()
   })
 })
